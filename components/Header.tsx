@@ -45,39 +45,41 @@ export default function Header() {
         </div>
 
         {/* SUB NAV */}
-        <div className="hidden md:block px-12 py-3 border-b border-neutral-300/40">
-          <nav className="flex gap-6 text-xs uppercase tracking-widest">
-            <span className="text-neutral-500">Dekade Living</span>
-            <span className="text-neutral-400">›</span>
+        <div className="hidden md:block border-b border-neutral-300/40">
+          <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <nav className="flex justify-center gap-6 py-3 text-xs uppercase tracking-widest">
+              <span className="text-neutral-500">Dekade Living</span>
+              <span className="text-neutral-400">›</span>
 
-            {[
-              "Home",
-              "Gallery",
-              "Location",
-              "Co-Work",
-              "Partner With Us",
-              "Blog",
-            ].map((item) => (
-              <button key={item} 
-              className="
-                relative
-                text-neutral-400
-                hover:text-neutral-800
-                after:absolute
-                after:left-0
-                after:-bottom-1
-                after:h-[1px]
-                after:w-0
-                after:bg-neutral-400
-                after:opacity-60
-                after:transition-all
-                after:duration-500
-                hover:after:w-full
-              ">
-                {item}
-              </button>
-            ))}
-          </nav>
+              {[
+                "Home",
+                "Gallery",
+                "Location",
+                "Co-Work",
+                "Partner With Us",
+                "Blog",
+              ].map((item) => (
+                <button key={item} 
+                className="
+                  relative
+                  text-neutral-400
+                  hover:text-neutral-800
+                  after:absolute
+                  after:left-0
+                  after:-bottom-1
+                  after:h-[1px]
+                  after:w-0
+                  after:bg-neutral-400
+                  after:opacity-60
+                  after:transition-all
+                  after:duration-500
+                  hover:after:w-full
+                ">
+                  {item}
+                </button>
+              ))}
+            </nav>
+          </div>
         </div>
       </header>
 

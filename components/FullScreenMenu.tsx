@@ -39,7 +39,16 @@ export default function FullscreenMenu({ open, onClose }: Props) {
       </button>
 
       {/* Content */}
-      <div className="max-w-xl mx-auto pt-24">
+      <div className="
+        w-full
+        max-w-[90%]
+        sm:max-w-md
+        md:max-w-lg
+        lg:max-w-xl
+        mx-auto
+        pt-24
+        px-6
+      ">
         <p className="text-sm tracking-widest uppercase mb-6">
           Dekade Living
         </p>
