@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { menu } from "../data/menuData";
 import SubMenu from "./SubMenu";
 
@@ -12,11 +12,19 @@ type Props = {
 export default function FullscreenMenu({ open, onClose }: Props) {
   const [active, setActive] = useState<string | null>(null);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <div
       className={`fixed inset-0 z-[60] bg-white text-neutral-800
-      transition-opacity duration-300
-      ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+      transform transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)]
+      ${open ? "translate-x-0 opacity-100 pointer-events-auto" : "-translate-x-full opacity-0 pointer-events-none"}`}
     >
       {/* Close */}
       <button
@@ -33,7 +41,7 @@ export default function FullscreenMenu({ open, onClose }: Props) {
       {/* Content */}
       <div className="max-w-xl mx-auto pt-24">
         <p className="text-sm tracking-widest uppercase mb-6">
-          Amankila
+          Dekade Living
         </p>
 
         <ul className="divide-y divide-neutral-300">
@@ -47,7 +55,7 @@ export default function FullscreenMenu({ open, onClose }: Props) {
                 }
                 className="w-full flex items-center justify-between py-6 text-2xl font-light"
               >
-                <span>{item.label}</span>
+                <span className="text-neutral-400 hover:text-neutral-800">{item.label}</span>
 
                 {item.children && (
                   <span className="text-xl text-neutral-400">›</span>
@@ -56,14 +64,6 @@ export default function FullscreenMenu({ open, onClose }: Props) {
             </li>
           ))}
         </ul>
-
-        {/* Footer links */}
-        <div className="mt-16 text-sm text-neutral-600">
-          <p className="mb-4">Global menu</p>
-          <a href="/" className="underline">
-            Brand home
-          </a>
-        </div>
       </div>
 
       {/* Submenu */}
