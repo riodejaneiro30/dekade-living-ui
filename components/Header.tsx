@@ -34,12 +34,8 @@ export default function Header() {
 
           {/* Right */}
           <div className="hidden md:flex items-center gap-6 text-xs">
-            <button className="uppercase tracking-widest">
-              English ▾
-            </button>
-
             <button className="bg-neutral-800 text-white px-6 py-2 uppercase tracking-widest">
-              Reserve
+              Contact Us
             </button>
           </div>
         </div>
