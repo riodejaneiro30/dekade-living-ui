@@ -1,15 +1,19 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Opening() {
   return (
     <section className="w-full h-[60vh] md:h-[90vh] relative">
-      <img
-        src="https://storage.googleapis.com/dekade-living-v1/photo/DSC00831-HDR.jpg"
-        className="absolute inset-0 w-full h-full object-cover"
+      <Image
+        src="https://storage.googleapis.com/dekade-living-v2/photo/DSC00831-HDR.webp"
         alt="A beautiful view of Dekade Living"
+        fill
+        priority
+        className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/30 dark:bg-black/60" />
 
       <div className="absolute inset-0 flex items-center justify-center px-6">
         <div className="text-center max-w-3xl">
