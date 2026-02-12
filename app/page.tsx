@@ -1,13 +1,11 @@
 import Header from "@/components/Header";
-import Accommodation from "@/components/Accommodation";
-import Opening from "@/components/Opening";
+import Body from "@/components/Body";
 
 export default function Home() {
   return (
     <>
       <Header />
-      {/* <Opening />
-      <Accommodation /> */}
+      <Body />
     </>
   );
 }
