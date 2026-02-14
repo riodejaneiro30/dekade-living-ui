@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { menu } from "../data/MenuData";
 import SubMenu from "./SubMenu";
 
 type Props = {
@@ -11,6 +10,15 @@ type Props = {
 
 export default function FullscreenMenu({ open, onClose }: Props) {
   const [active, setActive] = useState<string | null>(null);
+
+  const menu = [
+    { label: "Home", href: "/", children: null },
+    { label: "Gallery", href: "/gallery", children: null },
+    { label: "Location", href: "/location", children: null },
+    { label: "Co-Work", href: "/co-work", children: null },
+    { label: "Partner With Us", href: "/contact", children: null },
+    { label: "Blog", href: "/blog", children: null },
+  ];
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";

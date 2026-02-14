@@ -1,8 +1,14 @@
 "use client";
 
-import { images } from "@/data/ImageData";
-
 export default function Gallery() {
+  const prefix = "https://storage.googleapis.com/dekade-living-v2/photo/";
+
+  const images = [
+    { path: `${prefix}bespoke-bedroom.webp`, title: "Bespoke Bedroom" },
+    { path: `${prefix}common-garden.webp`, title: "Common Garden" },
+    { path: `${prefix}spacious-place.webp`, title: "Spacious Place" },
+  ];
+
   return (
     <section className="bg-white py-12">
       <div className="max-w-6xl mx-auto px-6">
