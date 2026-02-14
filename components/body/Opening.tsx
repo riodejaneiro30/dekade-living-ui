@@ -17,8 +17,8 @@ export default function Opening() {
 
       <div className="absolute inset-0 flex items-center justify-center px-6">
         <div className="text-center max-w-3xl">
-          <h1 className="text-white text-3xl md:text-6xl font-light tracking-[0.2em] leading-snug uppercase">
-            Lorem Ipsum Dolor Sit Amet
+          <h1 className="text-white text-3xl md:text-6xl font-light tracking-[0.2em] leading-snug md:leading-normal">
+            Timeless Comfort Bedroom in the Heart of Denpasar
           </h1>
         </div>
       </div>

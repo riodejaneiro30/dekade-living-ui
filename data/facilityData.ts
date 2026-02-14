@@ -1,0 +1,15 @@
+export const facility = [
+    { icon: "soap", label: "Bath Soap" },
+    { icon: "hot_tub", label: "Hot Water" },
+    { icon: "checkroom", label: "Clothes Hangers" },
+    { icon: "shower", label: "Bed Linens" },
+    { icon: "storage", label: "Clothing Storage" },
+    { icon: "ac_unit", label: "Air Conditioner" },
+    { icon: "camera_outdoor", label: "Exterior Security Cameras on the Property" },
+    { icon: "fire_extinguisher", label: "Fire Extinguisher" },
+    { icon: "medical_services", label: "First Aid Kit" },
+    { icon: "tv", label: "Flat-screen TV" },
+    { icon: "wifi", label: "Free Wi-fi" },
+    { icon: "desk", label: "Dedicated Work Area" },
+    { icon: "directions_car", label: "Free Parking" },
+  ];
