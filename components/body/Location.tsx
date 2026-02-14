@@ -2,7 +2,7 @@
 
 export default function Location() {
   return (
-    <section className="bg-white py-12">
+    <section id="location" className="bg-white py-12">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-center text-3xl mb-12">
           Our Location

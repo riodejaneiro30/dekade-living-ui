@@ -18,7 +18,7 @@ export default function Facility() {
   ];
 
   return (
-    <section className="bg-white py-12">
+    <section id="facility" className="bg-white py-12">
       <h2 className="text-center text-3xl mb-12">
         Our Space
       </h2>

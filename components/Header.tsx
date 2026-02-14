@@ -6,6 +6,13 @@ import FullscreenMenu from "./FullScreenMenu";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  const menu = [
+    { label: "Gallery", id: "gallery" },
+    { label: "Facility", id: "facility" },
+    { label: "Location", id: "location" },
+    { label: "Contact", id: "contact" },
+  ];
+
   return (
     <>
       <header className="w-full bg-[#f6f1e9] text-neutral-800 fixed top-0 z-50">
@@ -46,31 +53,31 @@ export default function Header() {
               <span className="text-neutral-500">Dekade Living</span>
               <span className="text-neutral-400">›</span>
 
-              {[
-                "Home",
-                "Gallery",
-                "Location",
-                "Co-Work",
-                "Partner With Us",
-                "Blog",
-              ].map((item) => (
-                <button key={item} 
-                className="
-                  relative
-                  text-neutral-400
-                  hover:text-neutral-800
-                  after:absolute
-                  after:left-0
-                  after:-bottom-1
-                  after:h-[1px]
-                  after:w-0
-                  after:bg-neutral-400
-                  after:opacity-60
-                  after:transition-all
-                  after:duration-500
-                  hover:after:w-full
-                ">
-                  {item}
+              {menu.map((item) => (
+                <button
+                  key={item.label}
+                  onClick={() => {
+                    document
+                      .getElementById(item.id)
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="
+                    relative
+                    text-neutral-400
+                    hover:text-neutral-800
+                    after:absolute
+                    after:left-0
+                    after:-bottom-1
+                    after:h-[1px]
+                    after:w-0
+                    after:bg-neutral-400
+                    after:opacity-60
+                    after:transition-all
+                    after:duration-500
+                    hover:after:w-full
+                  "
+                >
+                  {item.label}
                 </button>
               ))}
             </nav>

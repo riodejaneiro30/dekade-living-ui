@@ -12,12 +12,10 @@ export default function FullscreenMenu({ open, onClose }: Props) {
   const [active, setActive] = useState<string | null>(null);
 
   const menu = [
-    { label: "Home", href: "/", children: null },
-    { label: "Gallery", href: "/gallery", children: null },
-    { label: "Location", href: "/location", children: null },
-    { label: "Co-Work", href: "/co-work", children: null },
-    { label: "Partner With Us", href: "/contact", children: null },
-    { label: "Blog", href: "/blog", children: null },
+    { label: "Gallery", id: "gallery", children: null },
+    { label: "Facility", id: "facility", children: null },
+    { label: "Location", id: "location", children: null },
+    { label: "Contact", id: "contact", children: null },
   ];
 
   useEffect(() => {
@@ -34,7 +32,6 @@ export default function FullscreenMenu({ open, onClose }: Props) {
       transform transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)]
       ${open ? "translate-x-0 opacity-100 pointer-events-auto" : "-translate-x-full opacity-0 pointer-events-none"}`}
     >
-      {/* Close */}
       <button
         onClick={() => {
           setActive(null);
@@ -46,7 +43,6 @@ export default function FullscreenMenu({ open, onClose }: Props) {
         ✕
       </button>
 
-      {/* Content */}
       <div className="
         w-full
         max-w-[90%]
@@ -65,11 +61,20 @@ export default function FullscreenMenu({ open, onClose }: Props) {
           {menu.map((item) => (
             <li key={item.label}>
               <button
-                onClick={() =>
-                  item.children
-                    ? setActive(item.label)
-                    : onClose()
-                }
+                onClick={() => {
+                  if (item.children) {
+                    setActive(item.label);
+                    return;
+                  }
+
+                  onClose();
+
+                  setTimeout(() => {
+                    document
+                      .getElementById(item.id)
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }, 400);
+                }}
                 className="w-full flex items-center justify-between py-6 text-2xl font-light"
               >
                 <span className="text-neutral-400 hover:text-neutral-800">{item.label}</span>
@@ -83,12 +88,11 @@ export default function FullscreenMenu({ open, onClose }: Props) {
         </ul>
       </div>
 
-      {/* Submenu */}
       {active && (
         <SubMenu
           label={active}
           items={
-            menu.find((m) => m.label === active)?.children || []
+            menu.find((m) => m.label === active)?.children ?? []
           }
           onBack={() => setActive(null)}
         />
