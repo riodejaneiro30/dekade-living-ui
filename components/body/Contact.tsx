@@ -1,5 +1,7 @@
 "use client";
 
+import { FaInstagram, FaTiktok } from "react-icons/fa";
+
 export default function Contact() {
   return (
     <section id="contact" className="bg-[#e6e0d8] py-12">
@@ -26,6 +28,22 @@ export default function Contact() {
             <p className="text-sm text-neutral-400 leading-relaxed">
               WhatsApp: +62 813-3824-3557 <br />
             </p>
+            <div className="flex justify-center md:justify-start gap-4">
+              <a
+                href="https://instagram.com/dekadeliving"
+                target="_blank"
+                className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800 transition"
+              >
+                <FaInstagram size={25} className="text-lg" />
+              </a>
+              <a
+                href="https://tiktok.com/@dekadeliving"
+                target="_blank"
+                className="flex items-center gap-2 text-neutral-500 hover:text-neutral-800 transition"
+              >
+                <FaTiktok size={25} className="text-lg" />
+              </a>
+            </div>
           </div>
 
         </div>

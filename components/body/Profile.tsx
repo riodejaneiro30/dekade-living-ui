@@ -7,7 +7,8 @@ export default function Profile() {
         <p className="text-center text-neutral-600 leading-relaxed">
           Whether you are traveling for business, a family vacation,
           or a solo creative retreat, our space is designed to be your perfect
-          home away from in Denpasar Area.
+          home away from in Denpasar Area. Available for daily, weekly, and monthly stays
+          to suit your needs.
         </p>
       </div>
     </section>

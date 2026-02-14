@@ -4,7 +4,6 @@ export default function Facility() {
   const facilities = [
     { icon: "soap", label: "Bath Soap" },
     { icon: "hot_tub", label: "Hot Water" },
-    { icon: "checkroom", label: "Clothes Hangers" },
     { icon: "note", label: "Bed Linens" },
     { icon: "inventory", label: "Clothing Storage" },
     { icon: "balcony", label: "Balcony" },
@@ -20,23 +19,16 @@ export default function Facility() {
   return (
     <section id="facility" className="bg-white py-12">
       <h2 className="text-center text-3xl mb-12">
-        Our Space
+        Our Facility
       </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 place-items-center">
-        {facilities.map((item, index) => {
-          const isLast = index === facilities.length - 1;
-
+      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 place-items-center px-6">
+        {facilities.map((item) => {
           return (
             <div
               key={item.label}
               className={`
                 text-center space-y-4
-                ${isLast ? `
-                  col-span-2 justify-self-center
-                  md:col-span-3
-                  lg:col-span-6
-                ` : ""}
               `}
             >
               <span className="material-icons">{item.icon}</span>
