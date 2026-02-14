@@ -30,9 +30,13 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-6 text-xs">
-            <button className="bg-neutral-800 text-white px-6 py-2 uppercase tracking-widest">
+            <a
+              href="https://wa.me/6281338243557"
+              target="_blank"
+              className="bg-neutral-800 hover:bg-black transition text-white px-6 py-2 uppercase tracking-widest inline-flex items-center gap-2"
+            >
               Contact Us
-            </button>
+            </a>
           </div>
         </div>
 

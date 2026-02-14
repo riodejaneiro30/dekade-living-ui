@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { menu } from "../data/menuData";
+import { menu } from "../data/MenuData";
 import SubMenu from "./SubMenu";
 
 type Props = {

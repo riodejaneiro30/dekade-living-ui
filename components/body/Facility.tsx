@@ -1,6 +1,6 @@
 "use client";
 
-import { facility } from '@/data/facilityData';
+import { facility } from '@/data/FacilityData';
 
 export default function Facility() {
   return (
