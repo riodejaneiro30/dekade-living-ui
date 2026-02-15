@@ -15,7 +15,7 @@ export default function HeaderDesktop() {
 
   return (
     <>
-      <header className="w-full bg-[#f6f1e9] text-neutral-800 fixed top-0 z-50">
+      <header className="font-heading w-full bg-[#f6f1e9] text-neutral-800 fixed top-0 z-50">
         <div className="flex items-center justify-between px-4 md:px-12 py-4 border-b border-neutral-300/40 relative">
 
           <button
@@ -31,7 +31,7 @@ export default function HeaderDesktop() {
           </button>
 
           <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none">
-            <span className="text-sm md:text-2xl tracking-[0.25em] md:tracking-[0.3em] font-light whitespace-nowrap">
+            <span className="text-sm md:text-2xl tracking-[0.1em] md:tracking-[0.2em] font-light whitespace-nowrap">
               DEKADE LIVING
             </span>
           </div>

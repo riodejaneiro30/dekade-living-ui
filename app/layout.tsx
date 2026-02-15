@@ -4,14 +4,14 @@ import "./globals.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-montserrat",
   display: "swap",
 });
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-cormorant",
   display: "swap",
 });
@@ -42,7 +42,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${montserrat.variable} ${cormorant.variable} ${playfair.variable} antialiased`}
+        className={`${cormorant.className} ${montserrat.variable} ${playfair.variable} antialiased`}
       >
         {children}
       </body>

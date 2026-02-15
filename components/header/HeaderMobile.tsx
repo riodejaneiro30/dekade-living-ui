@@ -8,7 +8,7 @@ export default function HeaderMobile() {
 
   return (
     <>
-      <header className="w-full bg-[#f6f1e9] text-neutral-800 fixed top-0 z-50">
+      <header className="font-heading w-full bg-[#f6f1e9] text-neutral-800 fixed top-0 z-50">
         <div className="flex items-center justify-between px-4 py-4 border-b border-neutral-300/40">
           <div className="pointer-events-none">
             <span className="text-sm tracking-[0.25em] font-light whitespace-nowrap">
