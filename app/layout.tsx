@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Cormorant_Garamond } from "next/font/google";
+import { Montserrat, Cormorant_Garamond, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -16,8 +16,15 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Timeless Comfort Bedroom in the Heart of Denpasar - Dekade Living",
+  title: "Timeless Comfort in the Heart of Denpasar - Dekade Living",
   description: "Dekade Living Website",
 };
 
@@ -35,7 +42,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${montserrat.variable} ${cormorant.variable} antialiased`}
+        className={`${montserrat.variable} ${cormorant.variable} ${playfair.variable} antialiased`}
       >
         {children}
       </body>

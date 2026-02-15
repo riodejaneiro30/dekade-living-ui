@@ -22,7 +22,7 @@ export default function Contact() {
 
           <div className="space-y-4 max-w-sm">
             <h3 className="text-lg text-neutral-600 tracking-widest uppercase">
-              Central Reservation
+              Check Availability
             </h3>
 
             <p className="text-sm text-neutral-400 leading-relaxed">
