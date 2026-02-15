@@ -1,7 +1,5 @@
 "use client";
 
-import { v4 as uuid } from 'uuid';
-
 export default function Location() {
   const nearbyPlaces = [
     { icon: "local_hospital", name: "Rumah Sakit Bhayangkara", distance: "500 m" },
@@ -45,24 +43,34 @@ export default function Location() {
           Nearest Place
         </h2>
 
-        <div className="max-w-xl mx-auto space-y-6">
-          {nearbyPlaces.map((place) => (
-            <div key={uuid()} className="flex items-start gap-4">
-              
-              <span className="material-icons text-neutral-500 text-2xl mt-1">
-                {place.icon}
-              </span>
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 space-y-6">
+          {nearbyPlaces.map((place, index) => {
+            const isLast = index === nearbyPlaces.length - 1;
+            const isOdd = nearbyPlaces.length % 2 === 1;
 
-              <div>
-                <p className="text-lg text-neutral-600 font-medium">
-                  {place.name}
-                </p>
-                <p className="text-sm text-neutral-400">
-                  {place.distance}
-                </p>
+            return (
+              <div
+                key={place.name}
+                className={`
+                  flex items-start gap-4
+                  ${isLast && isOdd ? "col-span-2 justify-self-center md:col-span-1 md:justify-self-start" : ""}
+                `}
+              >
+                <span className="material-icons text-neutral-500 text-2xl mt-1">
+                  {place.icon}
+                </span>
+
+                <div>
+                  <p className="text-lg text-neutral-600 font-medium">
+                    {place.name}
+                  </p>
+                  <p className="text-sm text-neutral-400">
+                    {place.distance}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
