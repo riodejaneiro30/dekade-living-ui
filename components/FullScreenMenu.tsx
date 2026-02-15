@@ -28,7 +28,7 @@ export default function FullscreenMenu({ open, onClose }: Props) {
 
   return (
     <div
-      className={`fixed inset-0 z-[60] bg-white text-neutral-800
+      className={`font-heading fixed inset-0 z-[60] bg-white text-neutral-800
       transform transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)]
       ${open ? "translate-x-0 opacity-100 pointer-events-auto" : "-translate-x-full opacity-0 pointer-events-none"}`}
     >

@@ -8,7 +8,7 @@ type Props = {
 
 export default function SubMenu({ label, items, onBack }: Props) {
   return (
-    <div className="absolute inset-0 bg-white z-[70]">
+    <div className="font-heading absolute inset-0 bg-white z-[70]">
       {/* Back */}
       <button
         onClick={onBack}
