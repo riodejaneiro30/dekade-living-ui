@@ -13,7 +13,7 @@ export default function Contact() {
             </h3>
 
             <p className="text-sm leading-relaxed text-neutral-400">
-              Dekade Living <br />
+              dekadeliving@gmail.com <br />
               Jl. Wijaya Kusuma No. 29, Dangin Puri Kangin <br />
               North Denpasar District, Denpasar City <br />
               Bali 80234
@@ -22,7 +22,7 @@ export default function Contact() {
 
           <div className="space-y-4 max-w-sm">
             <h3 className="text-lg text-neutral-600 tracking-widest uppercase">
-              Check Availability
+              Book your stay
             </h3>
 
             <p className="text-sm text-neutral-400 leading-relaxed">

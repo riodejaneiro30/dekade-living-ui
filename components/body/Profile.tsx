@@ -9,14 +9,9 @@ export default function Profile() {
           designed for modern living and refined stays.
         </p>
         <p className="text-center text-neutral-600 leading-relaxed">
-          Blending the charm of a private villa with the practicality of 
-          affordable coliving, our space offers comfort, privacy, and style 
-          in one thoughtfully curated environment.
-        </p>
-        <p className="text-center text-neutral-600 leading-relaxed">
           Whether you are visiting for business, family time, 
           or a creative retreat, our coliving provides a truly elevated 
-          home-away-from-home experience — without the premium villa price tag.
+          home away from home experience.
         </p>
         <p className="text-center text-neutral-600 leading-relaxed">
           Available for daily, weekly, and monthly stays.
